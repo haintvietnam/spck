@@ -73,9 +73,10 @@ form button {
   display: flex;
   justify-content: space-between;
   margin-top: 50px;
-  align-items: center;
+  align-items: center; 
 }
 
-.navbar {
-  margin: 0 -6%;
+.carousel-inner {
+  margin-left: 6%;
+  margin-right: 6%;
 }

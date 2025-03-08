@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hai web</title>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="login_page.css" />
+    <script>
+      function redirectToHome() {
+        window.location.href = "login_pagepage.html"; // Thay "trang_chinh.html" bằng tên tệp trang chính của bạn
+      }
+    </script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <form action="">
+        <h1>Login</h1>
+        <div class="input-box">
+          <input type="email" placeholder="Email" id="email" required />
+          <i class="bx bxs-user"></i>
+        </div>
+        <div class="input-box">
+          <input
+            type="password"
+            placeholder="Password"
+            id="password"
+            required
+          />
+          <i class="bx bxs-lock-alt"></i>
+        </div>
+
+        <div class="remember-forgot">
+          <label><input type="checkbox" /> Remember me</label>
+          <a href="#">Forgot password?</a>
+        </div>
+
+        <button type="button" class="btn" onclick="validateLogin()">
+          Register
+        </button>
+
+        <div class="register-link">
+          <p>Don't have an account? <a href="#">Register</a></p>
+        </div>
+      </form>
+    </div>
+
+    <script>
+      function validateForm(event) {
+        event.preventDefault();
+        let username = document.getElementById("username").value;
+        let email = document.getElementById("email").value;
+        let password = document.getElementById("password").value;
+        let confirmPassword = document.getElementById("confirm-password").value;
+        let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        let isValid = true;
+
+        document.getElementById("username-error").textContent = "";
+        document.getElementById("email-error").textContent = "";
+        document.getElementById("password-error").textContent = "";
+        document.getElementById("confirm-password-error").textContent = "";
+
+        if (username.length < 6 || username.length > 18) {
+          document.getElementById("username-error").textContent =
+            "Username phải từ 6 đến 18 ký tự";
+          isValid = false;
+        }
+        if (!emailPattern.test(email)) {
+          document.getElementById("email-error").textContent =
+            "Email không hợp lệ";
+          isValid = false;
+        }
+        if (password.length < 6 || password.length > 18) {
+          document.getElementById("password-error").textContent =
+            "Mật khẩu phải từ 6 đến 18 ký tự";
+          isValid = false;
+        }
+        if (password !== confirmPassword) {
+          document.getElementById("confirm-password-error").textContent =
+            "Mật khẩu xác nhận không khớp";
+          isValid = false;
+        }
+
+        if (isValid) {
+          alert("Đăng ký thành công!");
+        }
+      }
+    </script>
+  </body>
+</html>
