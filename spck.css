@@ -1,19 +1,6 @@
 body {
-  margin: 0 5%;
+  /* margin: 0 5%; */
   overflow-x: hidden;
-}
-.card {
-  /* margin-left: 15%;   */
-  margin-top: 1%;
-  height: 250px;
-  width: 500px;
-}
-
-.card-1 {
-  margin-left: 15%;
-  margin-top: 1%;
-  height: 250px;
-  width: 500px;
 }
 
 .footer {
@@ -34,7 +21,6 @@ body {
 .footer div h3 {
   margin-bottom: 30px;
   font-weight: 300;
-  letter-spacing: 1px;
 }
 .col-1 a {
   color: #efefef;
@@ -69,14 +55,16 @@ form button {
   cursor: pointer;
 }
 
-.container-1 {
+.navbar {
   display: flex;
   justify-content: space-between;
-  margin-top: 50px;
-  align-items: center; 
+  align-items: center;
+  padding: 20px 5%;
+  background-color: #1258a9;
+  color: #efefef;
+  height: 60px;
 }
 
-.carousel-inner {
-  margin-left: 6%;
-  margin-right: 6%;
+.carousel-inner img {
+  border-radius: 10px;
 }
